@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\InventoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,3 +38,11 @@ Route::post('/suppliers/{id}', [SupplierController::class, 'update'])->name('sup
 Route::get('/suppliers/{id}/restore', [SupplierController::class, 'restore'])->name('supplier.restore');
 Route::delete('/suppliers/{id}', [SupplierController::class, 'delete'])->name('supplier.delete');
 Route::delete('/suppliers/{id}/destroy', [SupplierController::class, 'destroy'])->name('supplier.destroy');
+
+Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory.index');
+Route::get('/inventory/create', [InventoryController::class, 'create'])->name('inventory.create');
+Route::post('/inventory/store', [InventoryController::class, 'store'])->name('inventory.store');
+Route::get('/inventory/{id}/edit', [InventoryController::class, 'edit'])->name('inventory.edit');
+Route::put('/inventory/{id}/update', [InventoryController::class, 'update'])->name('inventory.update');
+Route::get('/inventory/{id}/restore', [InventoryController::class, 'restore'])->name('inventory.restore');
+

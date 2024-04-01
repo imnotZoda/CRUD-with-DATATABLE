@@ -1,11 +1,10 @@
 <?php
 
-// app/Models/Product.php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Inventory;
 
 class Product extends Model
 {
@@ -19,5 +18,9 @@ class Product extends Model
     public function images()
     {
         return explode(',', $this->img);
+    }
+    public function inventory()
+    {
+        return $this->hasMany(Inventory::class, 'product_id', 'id'); // Corrected relationship definition
     }
 }

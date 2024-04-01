@@ -63,7 +63,7 @@
     </table>
 
     <!-- Add Artwork Button -->
-    <a href="{{ route('product.create') }}" class="btn btn-primary mt-4"><i class="fas fa-plus"></i> Add Artwork</a>
+    <a href="{{ route('product.create') }}" class="btn btn-primary mt-4"><i class="fas fa-plus"></i> Add Product</a>
 </div>
 
 <!-- Bootstrap JS -->
