@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\ProductListController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,3 +48,6 @@ Route::get('/inventory/{id}/edit', [InventoryController::class, 'edit'])->name('
 Route::put('/inventory/{id}/update', [InventoryController::class, 'update'])->name('inventory.update');
 Route::get('/inventory/{id}/restore', [InventoryController::class, 'restore'])->name('inventory.restore');
 
+// Route::get('/productlist', [ProductListController::class, 'productlist'])->name('productlist');
+
+Route::get('product/productlist', [ProductListController::class, 'ProductList'])->name('product.productlist');
